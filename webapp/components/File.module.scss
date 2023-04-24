@@ -6,19 +6,87 @@
   width: 100%;
   border: 1px solid #ccc;
   display: inline-block;
-  padding: 10px 0px;
   cursor: pointer;
   text-align: center;
   border-radius: 5px;
   color: white;
   font-size: calc(10px + 2vmin);
-}
-
-.button:hover {
-  border: 1px solid #0bffa5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
 }
 
 .button:active {
-  box-shadow: 0 5px #666;
+  box-shadow: 0 5px #a0a0a0;
   transform: translateY(5px);
+}
+.button:hover img {
+  animation: jiggle 1s;
+  animation-iteration-count: infinite;
+}
+
+// jiggling animation
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.label {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: calc(5px + 2vmin);
+  text-align: left;
+  background-color: #f2effb;
+}
+.select {
+  width: 100%;
+  border: 1px solid whitesmoke;
+  background-color: #f2effb;
+  display: inline-block;
+  padding: 10px 0px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: calc(5px + 2vmin);
+  outline: none;
 }

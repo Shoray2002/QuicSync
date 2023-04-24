@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "./app.module.scss";
-import { use100vh } from "react-div-100vh";
-
 import { getLogLevel, getRoom, shareGetRoom } from "./lib/api";
 import log, { LogLevelDesc } from "loglevel";
 import history from "history/browser";
-
 import Index from "./components/index";
-
-function App() {
+import Header from "./components/Header";
+function App() {  
   const [address, setAddress] = useState<string>();
 
   useEffect(() => {
@@ -30,8 +27,9 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.app} style={{ height: use100vh() || "100vh" }}>
-      <div className={styles.card}>
+    <div className={styles.app}>
+      <Header />
+      <div className={styles.card} >
         {address ? (
           <Index address={address}></Index>
         ) : (

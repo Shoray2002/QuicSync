@@ -2,41 +2,43 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10px;
-  font-size: 12px;
-
+  width: 100%;
+  margin-top: -40px;
   .text {
+    font-size: 20px;
+    width: 100%;
     font-weight: 400;
     border-radius: 4px;
     color: #552fbc;
     background-color: #f2effb;
-    padding: 8px;
-    margin: 5px;
+    padding: 15px;
+    margin: 0px;
   }
-
   .base {
-    padding: 1px 5px;
-    margin: 3px;
-    border-radius: 15px;
-    border-width: 3px;
-    border-color: red;
-
+    padding: 5px 15px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     transition-duration: 0.4s;
     cursor: pointer;
-
-    border: 1px solid #f14668;
+    border: whitesmoke 1px solid;
+    border-radius: 4px;
   }
 
   .button {
-    color: red;
-    background-color: white;
+    background-color: #f2effb;
   }
-
   .button:hover {
     color: white;
-    background-color: #f14668;
+    background-color: #f47e60;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  .button:hover .icon {
+    scale: 1.2;
+  }
+  .button:active {
+    background-color: #15ff00;
   }
 }

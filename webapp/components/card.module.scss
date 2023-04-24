@@ -1,6 +1,8 @@
 .card {
   display: flex;
   height: 100%;
+  width: 100%;
+  align-self: center;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -8,7 +10,9 @@
 .item {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 .tag {
@@ -16,6 +20,7 @@
   align-items: center;
   padding: 10px;
   border-radius: 5px;
+  justify-content: left;
 }
 
 .primary {
@@ -47,4 +52,3 @@
   color: #f14668;
   background-color: #feecf0;
 }
-
