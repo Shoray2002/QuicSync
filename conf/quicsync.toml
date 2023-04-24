@@ -1,0 +1,53 @@
+[http]
+
+# http web service
+listen = "0.0.0.0:8080"
+
+# max concurrent
+roomAlive = 1024
+
+# room id: [0 - 9999]
+roomCount = 10000
+
+# path prefix under the domain name.
+pathPrefix = ""
+
+# http file relay storage
+storagePath = "data"
+
+# Enable Built-in turn server
+#[turn]
+
+# if no set, use random user
+#user = "quicsync:quicsync"
+
+#realm = "quicsync"
+#listen = "0.0.0.0:3478"
+
+# Public ip
+# if aws, aliyun
+#publicIP = "0.0.0.0"
+#relayMinPort = 49160
+#relayMaxPort = 49200
+
+[[iceservers]]
+urls = [ "stun:stun.22333.fun", "stun:cn.22333.fun", "stun:stun.l.google.com:19302" ]
+
+[[iceservers]]
+urls = [ "turn:turn.22333.fun", "turn:cn.22333.fun" ]
+username = "quicsync"
+credential = "quicsync"
+
+[qrcode]
+# black / red / green / yellow / blue / magenta / cyan / white
+foreground = "black"
+background = "white"
+
+# Error Recovery
+#  7% /   15%  / 25%  /  30%
+# low / medium / high / highest
+level = "low"
+
+# left / center / right
+align = "left"
+

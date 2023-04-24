@@ -1,0 +1,6 @@
+/quicsync
+/quicsync.toml
+/dist
+/bin
+
+node_modules
