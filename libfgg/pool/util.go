@@ -29,7 +29,7 @@ func HelpCreateTmpFile(name string, size int) (string, string, error) {
 
 	sum := md5.New()
 
-	chunkSize := 4096
+	chunkSize := 8192
 
 	count := size / chunkSize
 	remain := size % chunkSize
@@ -40,7 +40,7 @@ func HelpCreateTmpFile(name string, size int) (string, string, error) {
 		return "", "", err
 	}
 	// count
-	data := make([]byte, 4096)
+	data := make([]byte, chunkSize)
 	for i := 0; i < count; i++ {
 		if _, err := r.Read(data); err != nil {
 			return "", "", err

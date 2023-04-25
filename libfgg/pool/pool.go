@@ -46,7 +46,7 @@ func New() *Pool {
 		fileHash:   newFileHash(),
 		OnFinish:   func() {},
 		OnProgress: func(c int64) {},
-		chunkSize:  32 * 1024,
+		chunkSize:  256 * 1024,
 	}
 }
 

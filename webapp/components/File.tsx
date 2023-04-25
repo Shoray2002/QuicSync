@@ -24,6 +24,12 @@ function File(props: {
       hiddenFileInput.current?.click?.();
     }
   };
+  const trim = (f: string) => {
+    if (f.length > 20) {
+      return f.slice(0, 10) + "..." + f.slice(-10);
+    }
+    return f;
+  };
 
   const [remain, setRemain] = useState<number>(1);
   const [expire, setExpire] = useState<string>("5m");
@@ -114,12 +120,11 @@ function File(props: {
         {props.percent === 0
           ? props.recver
             ? "Download"
-            : filename
+            : trim(filename)
           : props.percent.toFixed(1) + "%"}
       </label>
       <input
         className={styles.input}
-        // This id e2e test need
         id="upload"
         type="file"
         ref={hiddenFileInput}

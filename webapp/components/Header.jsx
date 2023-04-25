@@ -15,26 +15,6 @@ const Header = () => {
           <img src={logo} alt="Logo" className="logo" />
         </a>
       </div>
-      <div className="hamburger-menu" onClick={handleMenuClick}>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
-      <div className={`dropdown-container ${menuOpen ? "open" : ""}`}>
-        <nav className="nav">
-          <ul className="nav-links">
-            <li>
-              <a href="#team">Team</a>
-            </li>
-            <li>
-              <a href="#work">Work</a>
-            </li>
-            <li>
-              <a href="#github">GitHub</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
     </header>
   );
 };

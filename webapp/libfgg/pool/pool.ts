@@ -24,7 +24,7 @@ export default class Pool {
 
   // [safari] max-message-size: 64 * 1024
   // [chrome, firefox] max-message-size: 256 * 1024
-  chunkSize: number = 32 * 1024
+  chunkSize: number = 256 * 1024
 
   currentSize: number = 0
   pendingSize: number = 0

@@ -20,8 +20,6 @@ const (
 )
 
 func (t *Fgg) UseWebsocket(addr string) error {
-	log.Debug("websocket connect: ", addr)
-
 	ws, _, err := websocket.DefaultDialer.Dial(addr, nil)
 	if err != nil {
 		return err
