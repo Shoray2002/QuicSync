@@ -10,7 +10,7 @@ import (
 
 func init() {
 	rootCmd.AddCommand(sendCmd)
-	sendCmd.Flags().StringP("share", "s", "https://send.22333.fun", "Share Link")
+	sendCmd.Flags().StringP("share", "s", "", "share with a friend")
 }
 
 var sendCmd = &cobra.Command{

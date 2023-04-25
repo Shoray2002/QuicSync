@@ -11,7 +11,7 @@ import (
 
 	"github.com/a-wing/lightcable"
 	"github.com/gorilla/mux"
-	"github.com/hashicorp/golang-lru"
+	lru "github.com/hashicorp/golang-lru"
 )
 
 func init() {
@@ -43,7 +43,7 @@ func NewServer(lcSrv *lightcable.Server, cfg *Config) *Server {
 	lcSrv.OnConnected(func(w http.ResponseWriter, r *http.Request) (string, string, bool) {
 		room := mux.Vars(r)["room"]
 		name := r.URL.Query().Get("name")
-		log.Printf("room name: %v\n", room)
+		log.Printf("Room name: %v\n", room)
 		return room, name, true
 	})
 

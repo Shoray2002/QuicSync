@@ -1,7 +1,5 @@
 package qrcode
 
-// Reference: https://github.com/dawndiy/qrcode-terminal/blob/master/qrcode-terminal.go
-
 import (
 	"bytes"
 	"os"

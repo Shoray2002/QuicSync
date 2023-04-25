@@ -15,8 +15,7 @@ var (
 	rootCmd = &cobra.Command{
 	Use:   "quicsync",
 	Short: "quicsync",
-	Long: `quicsync is a p2p file transport tool
-						https://github.com/a-wing/quicsync`,
+	Long: `quicsync is a p2p file transport tool`,
 	PersistentPreRun: func(c *cobra.Command, args []string) {
 		if verbose, _ := c.Flags().GetBool("verbose"); verbose {
 			log.SetReportCaller(true)

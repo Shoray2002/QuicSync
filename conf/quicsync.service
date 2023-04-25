@@ -1,5 +1,5 @@
 [Unit]
-Description=A file transfer tool that can be used in the browser webrtc p2p
+Description=quicsync server
 Requires=network-online.target
 After=network-online.target
 

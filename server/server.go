@@ -32,10 +32,8 @@ var dist embed.FS
 const (
 	ApiPathConfig = "/api/config"
 	ApiPathSignal = "/api/signal/"
-
 	ApiPathBoxInfo = "/api/info/"
 	ApiPathBoxFile = "/api/file/"
-
 	dbName = "store.db"
 )
 

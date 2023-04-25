@@ -23,7 +23,7 @@ func getUniqueID() string {
 
 var (
 	loopWait        = 10 * time.Millisecond
-	maxPendingCount = 100
+	maxPendingCount = 1000
 )
 
 const (
